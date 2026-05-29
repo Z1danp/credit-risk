@@ -1,4 +1,4 @@
-# Credit Risk Prediction — German Credit Dataset
+# Credit Risk Prediction — German Credit Dataset (My Second Project🔥🔥🔥)
 
 Proyek machine learning kedua saya untuk memprediksi risiko kredit nasabah menggunakan dataset German Credit. Evaluasi model menggunakan **cost matrix berbasis business metric** yang mencerminkan konsekuensi asimetris antara false positive dan false negative dalam konteks perkreditan.
 
