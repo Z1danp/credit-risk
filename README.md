@@ -82,7 +82,7 @@ $$\text{Total Cost} = (FP \times 1) + (FN \times 5)$$
 
 **Model terbaik: Logistic Regression + WoE** dengan total cost **99**.
 
-Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−52 poin), jauh melampaui kontribusi hyperparameter tuning  yang mengindikasikan bahwa kualitas representasi fitur lebih krusial dari kompleksitas model pada dataset ini.
+Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−56 poin), jauh melampaui kontribusi hyperparameter tuning  yang mengindikasikan bahwa kualitas representasi fitur lebih krusial dari kompleksitas model pada dataset ini.
 
 ---
 
