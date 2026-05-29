@@ -90,8 +90,8 @@ Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−56 
 
 1. Clone repo ini
 ```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/Z1danp/credit-risk
+cd credit-risk
 ```
 
 2. Install dependencies
