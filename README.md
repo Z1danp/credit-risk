@@ -87,8 +87,6 @@ Dievaluasi pada **test set (200 sampel)** yang dikunci sejak awal.
 
 Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−36 poin, dari 132 ke 96), jauh melampaui kontribusi hyperparameter tuning — mengindikasikan bahwa kualitas representasi fitur lebih krusial dari kompleksitas model pada dataset ini.
 
-> **Catatan metodologis.** Random Forest sempat mencatat rata-rata cost cross-validation lebih rendah (89.2 vs 100), namun tidak bertahan di test set (130). Ini indikasi overfitting terhadap fold tuning akibat grid hyperparameter yang luas (243 kombinasi vs 8 pada LR) dan signal-to-noise dataset yang rendah. Konsistensi CV↔test pada LR + WoE (100 → 96) menjadi dasar pemilihan model final.
-
 ---
 
 ## Cara Menjalankan
