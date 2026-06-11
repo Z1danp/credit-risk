@@ -1,12 +1,12 @@
-# Credit Risk Prediction — German Credit Dataset (My Second Project🔥🔥🔥)
+# Credit Risk Prediction — German Credit Dataset (My Second Learning Project 🔥)
 
-Proyek machine learning kedua saya untuk memprediksi risiko kredit nasabah menggunakan dataset German Credit. Evaluasi model menggunakan **cost matrix berbasis business metric** yang mencerminkan konsekuensi asimetris antara false positive dan false negative dalam konteks perkreditan.
+Learning project machine learning kedua saya untuk memprediksi risiko kredit nasabah menggunakan dataset German Credit. Evaluasi model menggunakan **cost matrix berbasis business metric** yang mencerminkan konsekuensi asimetris antara false positive dan false negative dalam konteks perkreditan.
 
 ---
 
 ## Dataset
 
-**Sumber:** [German Credit Data — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)  
+**Sumber:** [German Credit Data — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)
 **Dikurasi oleh:** Prof. Dr. Hans Hofmann, Universität Hamburg
 
 | Keterangan | Detail |
@@ -74,32 +74,39 @@ $$\text{Total Cost} = (FP \times 1) + (FN \times 5)$$
 
 ## Hasil
 
+Dievaluasi pada **test set (200 sampel)** yang dikunci sejak awal.
+
 | Model | False Positive | False Negative | Total Cost | Accuracy |
 |---|---|---|---|---|
-| LR Baseline (OHE) | 45 | 22 | 155 | 0.67 |
-| LR + WoE | 39 | 12 | **99** | **0.74** |
-| Random Forest | 43 | 15 | 118 | 0.71 |
+| LR Baseline (OHE) | 47 | 17 | 132 | 0.68 |
+| LR + WoE | 36 | 12 | **96** | **0.76** |
+| Random Forest (tuned) | 50 | 16 | 130 | 0.67 |
 
-**Model terbaik: Logistic Regression + WoE** dengan total cost **99**.
+**Model terbaik: Logistic Regression + WoE** dengan total cost **96**, sekaligus unggul di kedua jenis error (FP & FN) dibanding Random Forest.
 
-Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−56 poin), jauh melampaui kontribusi hyperparameter tuning  yang mengindikasikan bahwa kualitas representasi fitur lebih krusial dari kompleksitas model pada dataset ini.
+Kontribusi terbesar penurunan cost berasal dari transisi ke WoE encoding (−36 poin, dari 132 ke 96), jauh melampaui kontribusi hyperparameter tuning — mengindikasikan bahwa kualitas representasi fitur lebih krusial dari kompleksitas model pada dataset ini.
+
+> **Catatan metodologis.** Random Forest sempat mencatat rata-rata cost cross-validation lebih rendah (89.2 vs 100), namun tidak bertahan di test set (130). Ini indikasi overfitting terhadap fold tuning akibat grid hyperparameter yang luas (243 kombinasi vs 8 pada LR) dan signal-to-noise dataset yang rendah. Konsistensi CV↔test pada LR + WoE (100 → 96) menjadi dasar pemilihan model final.
 
 ---
 
 ## Cara Menjalankan
 
 1. Clone repo ini
+
 ```bash
 git clone https://github.com/Z1danp/credit-risk.git
 cd credit-risk
 ```
 
 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. Jalankan notebook
+
 ```bash
 jupyter notebook notebook.ipynb
 ```
