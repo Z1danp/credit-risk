@@ -7,6 +7,7 @@ Learning project machine learning kedua saya untuk memprediksi risiko kredit nas
 ## Dataset
 
 **Sumber:** [German Credit Data — UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)
+
 **Dikurasi oleh:** Prof. Dr. Hans Hofmann, Universität Hamburg
 
 | Keterangan | Detail |
